@@ -19,7 +19,7 @@ BuildRequires:	pkgconfig(Qt5Xml)
 BuildRequires:	qt5-linguist
 BuildRequires:	boost-devel
 BuildRequires:	bison
-BuildRequires:	cmake
+BuildRequires:	cmake3
 BuildRequires:	gcc-c++
 BuildRequires:	desktop-file-utils
 
