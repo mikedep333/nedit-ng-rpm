@@ -16,7 +16,7 @@ BuildRequires:	pkgconfig(Qt5Network)
 BuildRequires:	pkgconfig(Qt5PrintSupport)
 BuildRequires:	pkgconfig(Qt5Widgets)
 BuildRequires:	pkgconfig(Qt5Xml)
-BuildRequires:	qt5-linguist
+BuildRequires:	cmake(Qt5LinguistTools)
 BuildRequires:	boost-devel
 BuildRequires:	bison
 BuildRequires:	cmake
