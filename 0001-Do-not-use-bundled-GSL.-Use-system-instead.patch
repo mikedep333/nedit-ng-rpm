@@ -1,0 +1,31 @@
+From 820767cd57114d0c544c1c6816aa3464bcc0d657 Mon Sep 17 00:00:00 2001
+From: Mike DePaulo <mikedep333@gmail.com>
+Date: Thu, 22 Nov 2018 13:09:09 -0500
+Subject: [PATCH] Do not use bundled GSL. Use system instead.
+
+---
+ CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 9a537a77..2050542f 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -88,13 +88,13 @@ endif()
+ # -Wno-gnu-zero-variadic-macro-arguments
+ # 
+ 
++include_directories (BEFORE SYSTEM /usr/include/guidelines-support-library/)
+ add_subdirectory (Util)
+ add_subdirectory (src)
+ add_subdirectory (client)
+ add_subdirectory (Regex)
+ add_subdirectory (Settings)
+ add_subdirectory (Interpreter)
+-add_subdirectory (GSL EXCLUDE_FROM_ALL)
+ 
+ if (UNIX)
+     find_package(X11)
+-- 
+2.17.2
+
