@@ -9,6 +9,7 @@ URL:		https://github.com/eteran/nedit-ng
 Source0:	https://github.com/eteran/nedit-ng/archive/%{version}.tar.gz
 # From https://build.opensuse.org/package/view_file/editors/nedit-ng/nedit-ng.desktop?expand=1
 Source1:	nedit-ng.desktop
+Patch1:		0001-Do-not-use-bundled-GSL.-Use-system-instead.patch
 
 BuildRequires:	pkgconfig
 BuildRequires:	pkgconfig(Qt5Core)
@@ -22,7 +23,6 @@ BuildRequires:	bison
 BuildRequires:	cmake
 BuildRequires:	gcc-c++
 BuildRequires:	desktop-file-utils
-BuildRequires:	guidelines-support-library-devel
 
 %description
 nedit-ng is a Qt port of the Nirvana Editor (NEdit) version 5.6. It is intended to be a drop in replacement for nedit in every practical way, just as on many systems /usr/bin/vi is now a symlink to /usr/bin/vim.
@@ -32,7 +32,7 @@ Because it is a true port of the original code, it (at least for now) inherits s
 %prep
 %autosetup
 # Unbundle guidelines-support-library
-rm -rf nedit-ng-%{version}/GSL
+rm -rf GSL
 
 
 %build
